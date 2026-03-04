@@ -1,2 +1,59 @@
-# test-website
-test run
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Project</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mini Project</h1>
+
+    <img id="image" src="https://imgs.search.brave.com/cDmyM3LhtVTPF7bjNq5Dwk8W3QKl9juWLQRIqVQqcqc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmlt/Z2ZsaXAuY29tLzIv/NmU1emJ1LmpwZw">
+
+    <br>
+
+    <button onclick="changeImage()">Change Image</button>
+
+    <script>
+        let toggle = true;
+
+        function changeImage() {
+            const img = document.getElementById("image");
+
+            if (toggle) {
+                img.src = "https://imgs.search.brave.com/zp_JdK0KPuogOvkGUIxmCa3aUv0wgeWFIYBiuZUWS4A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/c0VuamZrTjFXWFFB/QUFBTS9mbGlwLW9m/Zi1taWRkbGUtZmlu/Z2VyLmdpZg.gif";
+            } else {
+                img.src = "https://imgs.search.brave.com/_lO84dme5l3cvkXb7RqRgwS6_pHT_H95ds00SKma3bc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbWlh/LWtoYWxpZmEtcGlj/dHVyZXMtd2xibXRk/cHZxbWtkaW9ubS5q/cGc";
+            }
+
+            toggle = !toggle;
+        }
+    </script>
+
+</body>
+</html>
